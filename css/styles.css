@@ -223,7 +223,7 @@ footer h3 {
   outline: none;
 }
 
-.contact-form button {
+.contact-form .btn {
   background-color: var(--dark-color);
   color: #fff;
   padding: 1rem 1rem;
@@ -234,7 +234,7 @@ footer h3 {
   width: 100%;
   font-size: 1.1rem;
 }
-.contact-form button:hover {
+.contact-form .btn:hover {
   background-color: #000;
 }
 /* Responsive */
