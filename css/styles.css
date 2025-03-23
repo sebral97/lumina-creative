@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-primary: #fcf5e9;
+  --dark-color: #333;
+  --wrapper-width: 1100px;
+  --large-wrapper-width: 1400px;
+}
+
+body {
+  font-family: "open sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
+/* utility classes */
+.wrapper {
+  max-width: var(--wrapper-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.large-wrapper {
+  max-width: var(--large-wrapper-width);
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo {
+  width: 8rem;
+}
+
+.main-header .main-nav .main-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-header a {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.main-header a:hover {
+  background-color: var(--bg-primary);
+  cursor: pointer;
+}
+
+.current {
+  background-color: var(--bg-primary);
+  font-weight: 600;
+}
+
+/* hero section */
+.hero {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hero h2 {
+  font-weight: normal;
+  font-size: 3rem;
+}
+.hero span {
+  background-color: var(--bg-primary);
+}
+
+/* main content */
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+}
+.gallery-item {
+  width: calc(33.333% - 1.3rem);
+}
+.gallery-item img {
+  border-radius: 0.5rem;
+}
+
+.gallery-item img:hover {
+  filter: opacity(0.9);
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--dark-color);
+}
+footer .logo {
+  width: 8rem;
+}
+
+footer .fab {
+  font-size: 2rem;
+}
+footer .follow ul {
+  display: flex;
+  gap: 1rem;
+}
+
+footer h3 {
+  margin-bottom: 1rem;
+}
+
+/* Services */
+
+.services {
+  background-color: var(--dark-color);
+  color: #fff;
+  padding: 3rem 2rem 4rem;
+  margin-bottom: 1rem;
+}
+.services h3,
+.teams h3,
+.contact-form h3 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.flex-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex-wrapper .service,
+.flex-wrapper .team {
+  flex: 1;
+}
+
+.services h4 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Teams */
+.teams {
+  padding: 3rem 2rem 4rem;
+}
+.teams .flex-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.team h4,
+.team p {
+  text-align: center;
+}
+
+.team img {
+  border-radius: 10px;
+}
+
+/*Contact*/
+
+.contact-hero {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+.contact-hero span {
+  color: var(--dark-color);
+}
+/*Visually hidden class*/
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.contact-form {
+  padding: 3rem 2rem 4rem;
+}
+.contact-form p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin: 1.5rem 0;
+}
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-bottom: 1px solid var(--dark-color);
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0 1rem;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 200px;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+}
+
+.contact-form button {
+  background-color: var(--dark-color);
+  color: #fff;
+  padding: 1rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+  width: 100%;
+  font-size: 1.1rem;
+}
+.contact-form button:hover {
+  background-color: #000;
+}
+/* Responsive */
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .logo {
+      width: 13rem;
+    }
+  }
+
+  .hero {
+    height: 300px;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  .gallery {
+    gap: 0.7rem;
+
+    .gallery-item {
+      width: calc(50% - 1.3rem);
+    }
+  }
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
+    h3 {
+      text-align: center;
+    }
+
+    li {
+      text-align: center;
+    }
+  }
+  .services {
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+  .flex-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
